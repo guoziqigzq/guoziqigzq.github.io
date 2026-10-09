@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 修改姓名后，同时更新下面的标题和描述。 -->
+  <title>[你的姓名] · 个人学术主页</title>
+  <meta name="description" content="个人学术主页：研究方向、学术论文、教育经历与联系方式。">
+  <meta name="theme-color" content="#244d70">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23244d70'/%3E%3Cpath d='M10 11h8l2 3 2-3h8v19h-8l-2 2-2-2h-8z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M20 15v16' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <header class="topbar">
+    <a class="site-name" href="#about" aria-label="回到个人简介">[Your Name]<span> / ACADEMIC</span></a>
+    <nav aria-label="主导航" class="navigation">
+      <a href="#about" aria-current="location">简介</a>
+      <a href="#research">研究</a>
+      <a href="#publications">论文</a>
+      <a href="#experience">经历</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <aside class="profile" aria-label="个人信息">
+      <!-- 有真实头像时，将下一行替换为 <img class="portrait" src="./assets/avatar.jpg" alt="你的姓名"> -->
+      <div class="portrait initials" aria-label="个人头像占位">YN<span aria-hidden="true">YOUR NAME</span></div>
+      <h1>[你的姓名]</h1>
+      <p class="english-name">[Your Name]</p>
+      <p class="position">[学术职位 / 学位阶段]</p>
+      <p class="affiliation">[院系 / 实验室]<br>[学校 / 研究机构]</p>
+      <div class="profile-rule"></div>
+      <dl class="profile-details">
+        <div><dt>研究领域</dt><dd>[你的研究领域]</dd></div>
+        <div><dt>所在地</dt><dd>[城市，国家]</dd></div>
+      </dl>
+      <a class="contact-button" href="#contact">联系方式</a>
+      <!-- 在此添加真实学术档案链接，例如：
+      <div class="social-links">
+        <a href="你的 Google Scholar 网址" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="你的 GitHub 网址" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="./assets/cv.pdf">个人简历</a>
+      </div>
+      -->
+      <p class="sidebar-note">RESEARCH · LEARNING · DISCOVERY</p>
+    </aside>
+
+    <main id="main">
+      <!-- 完成所有资料替换后，删除这条模板提示。 -->
+      <p class="template-notice"><span>模板预览</span> 方括号内为待补充的个人资料</p>
+
+      <section id="about" class="about-section" aria-labelledby="about-title">
+        <div class="section-heading"><span class="section-number">01</span><h2 id="about-title">关于我 <span>About</span></h2></div>
+        <!-- 个人简介：按实际情况改写，可删除不适用的句子。 -->
+        <p class="intro">你好，我是 <strong>[你的姓名]</strong>。</p>
+        <p>我目前是 [学校 / 研究机构] 的 [职位 / 学位阶段]，在 [院系 / 实验室] 从事 [研究领域] 相关研究。</p>
+        <p>我的研究围绕 <strong>[核心研究问题]</strong> 展开，重点关注 [具体研究方向]，希望通过 [研究方法] 理解并解决 [目标问题]。</p>
+        <p>此前，我在 [学校] 获得 [专业] [学位]。有关研究合作与学术交流，欢迎通过邮件联系我。</p>
+      </section>
+
+      <section id="research" aria-labelledby="research-title">
+        <div class="section-heading"><span class="section-number">02</span><h2 id="research-title">研究方向 <span>Research interests</span></h2></div>
+        <!-- 可以增删 research-item，保留实际研究方向。 -->
+        <div class="research-grid">
+          <article class="research-item"><span class="research-index">I</span><h3>[研究方向一]</h3><p>[用一句话说明你关注的研究问题。]</p></article>
+          <article class="research-item"><span class="research-index">II</span><h3>[研究方向二]</h3><p>[用一句话说明主要方法或研究视角。]</p></article>
+          <article class="research-item"><span class="research-index">III</span><h3>[研究方向三]</h3><p>[用一句话说明应用场景或研究目标。]</p></article>
+        </div>
+      </section>
+
+      <section id="publications" aria-labelledby="publications-title">
+        <div class="section-heading"><span class="section-number">03</span><h2 id="publications-title">学术论文 <span>Publications</span></h2></div>
+        <p class="section-note">按发表时间倒序排列 · <strong>加粗</strong>为本人</p>
+        <!-- 论文条目：复制整个 article 添加新论文；没有的条目请删除。 -->
+        <article class="publication">
+          <div class="pub-year">[年份]</div>
+          <div class="pub-body">
+            <p class="pub-type">[期刊 / 会议名称]</p>
+            <h3>[论文标题 / Title of your research paper]</h3>
+            <p class="authors"><strong>[你的姓名]</strong>，[合作者姓名]，[合作者姓名]</p>
+            <p class="venue">[期刊或会议全称] · [卷号、页码或其他发表信息]</p>
+            <p class="pub-summary">[简要介绍论文解决的问题、使用的方法与主要发现。]</p>
+            <!-- 获得真实链接后，取消注释并替换网址：
+            <div class="paper-links">
+              <a href="论文 PDF 的真实网址" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a href="代码仓库的真实网址" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="论文 DOI 的真实网址" target="_blank" rel="noopener noreferrer">DOI</a>
+            </div>
+            -->
+            <details class="citation">
+              <summary>BibTeX <span>引用格式示例</span></summary>
+              <div class="citation-content"><pre><code>@article{yourname_year_keyword,
+  title   = {Your paper title},
+  author  = {Your Name and Coauthor Name},
+  journal = {Journal name},
+  year    = {YYYY}
+}</code></pre><button class="copy-citation" type="button">复制引用</button></div>
+            </details>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="pub-year">[年份]</div>
+          <div class="pub-body">
+            <p class="pub-type">[期刊 / 会议名称]</p>
+            <h3>[另一篇论文标题 / Another research paper]</h3>
+            <p class="authors">[合作者姓名]，<strong>[你的姓名]</strong>，[合作者姓名]</p>
+            <p class="venue">[期刊或会议全称] · [卷号、页码或其他发表信息]</p>
+            <p class="pub-summary">[简要介绍这项工作的研究内容和贡献。]</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-title">
+        <div class="section-heading"><span class="section-number">04</span><h2 id="experience-title">教育与经历 <span>Background</span></h2></div>
+        <div class="timeline">
+          <article class="timeline-item"><p class="period">[起始年份] — 至今</p><div><h3>[学校 / 研究机构]</h3><p>[院系 / 专业] · [学位或职位]</p><p class="muted">[研究主题或导师信息，可选]</p></div></article>
+          <article class="timeline-item"><p class="period">[起始年份] — [结束年份]</p><div><h3>[学校 / 研究机构]</h3><p>[院系 / 专业] · [学位或职位]</p><p class="muted">[相关经历，可选]</p></div></article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <div class="section-heading"><span class="section-number">05</span><h2 id="contact-title">联系我 <span>Contact</span></h2></div>
+        <p>欢迎就研究合作与学术问题联系。</p>
+        <dl class="contact-details">
+          <!-- 替换成真实邮箱后，可将邮箱文字改成 <a href="mailto:你的邮箱">你的邮箱</a>。 -->
+          <div><dt>电子邮箱</dt><dd>[你的学术邮箱]</dd></div>
+          <div><dt>通讯地址</dt><dd>[学校 / 研究机构，院系，城市]</dd></div>
+        </dl>
+      </section>
+
+      <footer class="footer"><p>© <span id="current-year">2026</span> [你的姓名]</p><a href="#about">回到顶部</a></footer>
+    </main>
+  </div>
+  <div id="copy-status" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

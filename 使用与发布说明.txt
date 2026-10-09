@@ -1,0 +1,94 @@
+个人学术主页 · 使用与发布说明
+
+这是一套可直接放到 GitHub Pages 的静态主页，无需安装依赖或编译。
+当前是待填入个人资料的模板，论文、学校、姓名均为明确占位，不代表真实学术成果。
+
+一、查看主页
+
+解压后双击 index.html，即可在浏览器查看。
+请保持 index.html、styles.css、script.js 位于同一文件夹。
+关闭 JavaScript 后，正文、导航和 BibTeX 展开仍可使用；引用自动复制与导航高亮需要 JavaScript。
+从本地文件打开时，若浏览器不允许自动复制，页面会选中引用文字供手动复制。
+
+二、替换个人资料
+
+用文本编辑器打开 index.html。搜索方括号“[”，逐一替换：
+1. 姓名、英文名、职位、学校和院系。
+2. 个人简介与研究方向。
+3. 论文标题、作者、发表年份、期刊或会议、内容简介。
+4. 教育经历、邮箱和通讯地址。
+5. 网页标题、页脚署名及头像姓名缩写 YN。
+
+没有相应成果或经历时，删除对应条目即可；请勿保留模板论文作为真实成果展示。
+引用格式中的英文示例与 YYYY 也需要替换成真实 BibTeX；不用时可删除整个 details 元素。
+全部替换完成后，删除标有“模板预览”的提示段落。
+
+头像：将照片命名为 avatar.jpg，放入 assets 文件夹，按 index.html 中头像上方的注释替换头像占位。
+简历：将 PDF 放入 assets/cv.pdf；按侧栏注释启用个人简历链接。
+学术链接：侧栏预留 Google Scholar 和 GitHub 链接示例，仅填入真实网址后再启用。
+论文链接：论文下方预留 PDF、Code、DOI 链接示例，仅启用实际存在的链接。
+联系邮箱：按联系方式区域内注释加入 mailto 链接，即可点击打开邮件客户端。
+
+修改布局和颜色：编辑 styles.css。顶部 --accent 是主要强调色。
+增加论文：复制现有 class="publication" 的整个 article 元素，再替换其中的内容。
+默认提供两篇论文的展示位置，可根据实际情况增删。
+
+三、使用 Git 发布到 username.github.io
+
+当前文件夹已初始化为本地 Git 仓库，默认分支为 main。
+首个提交由 Codex 创建。提交身份仅对该次命令生效，不会修改你的全局 Git 姓名或邮箱。
+随附 .github/workflows/pages.yml，在推送 main 分支时自动发布网页。
+
+1. 登录 GitHub，新建一个公开仓库，名称为“你的 GitHub 用户名.github.io”。
+   例如用户名为 example，则仓库名为 example.github.io。
+   如果已有该仓库，请先备份现有内容，不要直接覆盖正在使用的主页。
+
+2. 在 academic-homepage 文件夹打开终端，关联新建的空仓库：
+
+   git remote add origin https://github.com/你的用户名/你的用户名.github.io.git
+
+   这里的“你的用户名”需要替换为真实用户名。
+   已有 origin 时请先使用 git remote -v 检查，不要重复添加或直接覆盖。
+   若远端已有文件或历史，先检查并整合现有内容，不要强制推送。
+
+3. 首次推送：
+
+   git push -u origin main
+
+   如出现登录提示，使用 GitHub 正常登录流程完成认证。
+   不要把密码或令牌写入主页文件、仓库地址或聊天记录。
+
+4. 打开仓库 Settings → Pages。
+   在 Build and deployment 中，Source 选择 GitHub Actions。
+   如果第一次自动发布因尚未启用 Pages 而失败，设置完成后到 Actions 页面，
+   打开 Publish academic homepage，选择 Run workflow，在 main 分支重新运行。
+
+5. 等待仓库 Actions 中 Publish academic homepage 完成，使用 Settings → Pages 显示的站点链接访问。
+   个人站点地址为 https://你的用户名.github.io/。
+   发布可能需要几分钟；以 Pages 页面显示的结果为准。
+
+6. 日后更新个人资料后，在同一文件夹执行：
+
+   git add index.html styles.css script.js assets
+   git commit -m "Update academic homepage"
+   git push
+
+   若 Git 提示缺少提交身份，可只为此仓库配置真实姓名及你的 GitHub 提交邮箱：
+
+   git config user.name "你的姓名"
+   git config user.email "你的提交邮箱"
+
+   GitHub 的隐藏邮箱可在 GitHub Settings → Emails 查看。
+   推送 main 后，GitHub Actions 会自动发布。
+
+发布流程只上传主页、样式、交互脚本和 assets，不会把 Git 历史或本说明发布到网站。
+如通过 ZIP 在别处恢复代码，ZIP 不含 .git 历史，需要重新 git init -b main、git add . 和 git commit。
+
+页面使用相对资源路径，也能用于普通项目仓库的 Pages 子路径。
+页面不依赖外部字体、CDN、后端、分析服务或第三方脚本。
+
+GitHub 官方文档（2026-10-09 核对）：
+创建站点：https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+配置发布来源：https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+当前交付状态：本地 Git 仓库、主页文件和自动发布配置已准备；尚未关联远端、推送或公开发布。
