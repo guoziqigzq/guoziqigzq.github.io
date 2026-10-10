@@ -64,17 +64,10 @@ h2 span { display: inline-block; margin-left: .7rem; font: 400 .94rem/1.5 var(--
 .current-work { margin-top: 1.75rem; padding: 1.25rem 1.4rem; background: var(--soft); border-left: 2px solid #a9bfce; }
 .work-label { font-size: .8125rem; color: var(--accent); margin-bottom: .35rem; }
 .current-work h3 { font-size: 1.06rem; font-weight: 600; }
-.work-details, .project-details { margin: .8rem 0 0; font-size: .875rem; }
-.work-details div, .project-details div { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: .6rem; margin-top: .45rem; }
-.work-details dt, .project-details dt { color: var(--muted); }
-.work-details dd, .project-details dd { margin: 0; overflow-wrap: anywhere; }
-.project { display: grid; grid-template-columns: 98px minmax(0, 1fr); gap: 1.2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
-.project:first-of-type { padding-top: .3rem; }
-.project:last-child { padding-bottom: 0; border-bottom: 0; }
-.project-period { font-size: .8125rem; color: var(--muted); }
-.project-type { font-size: .8125rem; color: var(--accent); margin-bottom: .3rem; }
-.project h3 { font-size: 1.06rem; font-weight: 600; line-height: 1.7; }
-.project-summary { font-size: .9rem; margin-top: .5rem; }
+.work-details { margin: .8rem 0 0; font-size: .875rem; }
+.work-details div { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: .6rem; margin-top: .45rem; }
+.work-details dt { color: var(--muted); }
+.work-details dd { margin: 0; overflow-wrap: anywhere; }
 .section-note { color: var(--muted); font-size: .8125rem; margin-top: -.6rem; margin-bottom: 1.4rem; }
 .publication { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 1rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .publication:first-of-type { padding-top: .3rem; }
@@ -146,9 +139,8 @@ pre { margin: 0 0 .8rem; white-space: pre-wrap; overflow-wrap: anywhere; font-si
   h2 span { font-size: .9rem; margin-left: .4rem; }
   .section-heading { gap: .6rem; }
   .publication { grid-template-columns: 1fr; gap: .25rem; }
-  .project { grid-template-columns: 1fr; gap: .25rem; }
   .current-work { padding: 1rem; }
-  .work-details div, .project-details div { grid-template-columns: 1fr; gap: .05rem; margin-top: .65rem; }
+  .work-details div { grid-template-columns: 1fr; gap: .05rem; margin-top: .65rem; }
   .pub-year { font-size: .8125rem; }
   .pub-type { font-size: .75rem; }
   .contact-details div { grid-template-columns: 1fr; gap: 0; margin-top: .8rem; }
@@ -164,6 +156,6 @@ pre { margin: 0 0 .8rem; white-space: pre-wrap; overflow-wrap: anywhere; font-si
   .profile { position: static; }
   section { break-inside: avoid; padding-bottom: 1rem; margin-bottom: 1rem; }
   .publication { break-inside: avoid; }
-  .project, .current-work { break-inside: avoid; }
+  .current-work { break-inside: avoid; }
   a { color: inherit; }
 }
