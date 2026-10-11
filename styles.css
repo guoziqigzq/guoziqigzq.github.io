@@ -56,10 +56,10 @@ h2 span { display: inline-block; margin-left: .7rem; font: 400 .94rem/1.5 var(--
 .about-section p { margin-top: .85rem; }
 .about-section .intro { font-size: 1.22rem; margin-bottom: 1.1rem; }
 .intro strong { font-weight: 600; }
-.research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+.research-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; }
 .research-item { border-left: 2px solid #d9e3eb; padding-left: 1rem; }
 .research-index { font: italic .95rem/1.2 var(--serif); color: var(--muted); }
-.research-item h3 { margin-top: .45rem; font-size: 1rem; font-weight: 600; }
+.research-item h3 { font-size: 1rem; font-weight: 600; }
 .research-item p { margin-top: .45rem; font-size: .875rem; color: var(--muted); line-height: 1.8; }
 .section-note { color: var(--muted); font-size: .8125rem; margin-top: -.6rem; margin-bottom: 1.4rem; }
 .publication { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 1rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
